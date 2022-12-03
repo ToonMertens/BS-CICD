@@ -1,7 +1,0 @@
-ui/controller/Overview.class
-ui/controller/RequestHandler.class
-domain/service/AnimalService.class
-ui/controller/Controller.class
-ui/controller/Add.class
-domain/model/Animal.class
-ui/controller/HandlerFactory.class
