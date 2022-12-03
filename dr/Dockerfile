@@ -5,8 +5,9 @@ RUN mvn clean package -DskipTests
 
 FROM tomcat:9.0-jdk17-corretto
 RUN ["rm", "-rf", "/usr/local/tomcat/webapps/ROOT"]
-RUN mkdir HET FUCKING WERKT
+RUN mkdir HET
 
 COPY --from=builder /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=builder /app/target/*.war HET
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
